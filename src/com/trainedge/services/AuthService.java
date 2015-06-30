@@ -30,7 +30,7 @@ import com.trainedge.helpers.AuthHelper;
 @Path("/auth")
 public class AuthService {
 	
-	/*
+	/**
 	 * The method authenticates against a given password with the supplied shopperId.
 	 * Will return status 200 OK if the password is non-null and matches up in the DB.
 	 * Will return status 200 OK and an errorMessage if the password does not match 
@@ -61,7 +61,7 @@ public class AuthService {
 		}
 	}
 	
-	/*
+	/**
 	 * The method authenticates against a given key with the supplied retailerId.
 	 * Will return status 200 OK if the key is non-null and matches up in the DB.
 	 * Will return status 200 OK and an errorMessage if the key does not match 
@@ -91,7 +91,7 @@ public class AuthService {
 		}
 	}
 	
-	/* 
+	/** 
 	 * The method authenticates against a cookie value with the supplied retailerId.
 	 * Will return status 200 OK if the key extracted from the cookie is non-null and 
 	 * matches up in the DB.
