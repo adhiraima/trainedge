@@ -18,10 +18,22 @@ public class ShopperHelper {
 	public static ShopperTokenDao shopperTokenDao = 
 			ReconextB2BModelFactory.getShopperTokenDao();
 	
+	/**
+	 * 
+	 * @param shopperId shopper Id supplied
+	 * @return shopper entity in the DB matching the shopper ID supplied
+	 * @throws B2BDAOException
+	 */
 	public static Shopper getShopper(String shopperId) throws B2BDAOException {
 		return shopperDao.findByShopperId(shopperId);
 	}
 	
+	/**
+	 * 
+	 * @param userName the username supplied
+	 * @return the shopper entity in the DB matching the username supplied
+	 * @throws B2BDAOException
+	 */
 	public static Shopper getShopperByUserName(String userName) throws B2BDAOException {
 		return shopperDao.findByShopperLoginName(userName);
 	}

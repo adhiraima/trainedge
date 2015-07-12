@@ -30,9 +30,9 @@ public class AuthHelper {
 	
 	/**
 	 * 
-	 * @param shopperToken
-	 * @param shopperId
-	 * @return boolean
+	 * @param shopperToken The shopper header token value
+	 * @param shopperId The system shopper ID 
+	 * @return boolean Whether the user is auhthenticated or not
 	 * 
 	 * This helper method checks if the shopper exists , if not will create a shopper
 	 * with the supplied creds in the DB
@@ -81,9 +81,10 @@ public class AuthHelper {
 	
 	/**
 	 * 
-	 * @param retialorId
-	 * @param retailorToken
-	 * @return boolean
+	 * @param retialerId the system Retailer DI
+	 * @param retailerToken the Auth header token value
+	 * @return boolean returns whether the retailer has access or not with 
+	 *         the token supplied
 	 * @throws B2BDAOException
 	 * 
 	 * This method will return true or false depending on whether a retailer 
@@ -103,11 +104,12 @@ public class AuthHelper {
 	
 	/**
 	 * 
-	 * @param userName
-	 * @param password
-	 * @return
-	 * @throws B2BDAOException
+	 * @param userName the supplied username for login
+	 * @param password the supplied password for login
 	 * 
+	 * @return boolean depending on the username is validated with the 
+	 * 		   password supplied
+	 * @throws B2BDAOException
 	 * 
 	 */
 	public static boolean authenticateInternal(String userName, String password) 

@@ -3,8 +3,6 @@
  */
 package com.trainedge.services;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -13,13 +11,11 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.omg.PortableInterceptor.SUCCESSFUL;
 
 import com.reconext.b2b.exception.B2BDAOException;
 import com.trainedge.helpers.ApplicationConstants;
@@ -37,10 +33,10 @@ public class AuthService {
 	
 	/**
 	 * 
-	 * @param shopperId
-	 * @param retailorId
-	 * @param shoppertoken
-	 * @param retailortoken
+	 * @param shopperId The system shopper ID
+	 * @param retailorId The system retailer ID
+	 * @param shoppertoken The header X-CSRF-Token
+	 * @param retailortoken The header X-CSRF-Retail-Token
 	 * @return
 	 * @throws JSONException
 	 * @throws B2BDAOException
@@ -79,8 +75,8 @@ public class AuthService {
 	
 	/**
 	 * 
-	 * @param retailerId
-	 * @param retailertoken
+	 * @param retailerId The system Retailer ID
+	 * @param retailertoken retailortoken The header X-CSRF-Retail-Token
 	 * @return
 	 * @throws JSONException
 	 * @throws B2BDAOException
@@ -107,8 +103,8 @@ public class AuthService {
 	
 	/**
 	 * 
-	 * @param userName
-	 * @param password
+	 * @param userName the username supplied for login form
+	 * @param password the password supplied for login form
 	 * @return
 	 * @throws B2BDAOException
 	 * @throws JSONException
